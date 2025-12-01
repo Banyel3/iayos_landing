@@ -17,6 +17,7 @@ import {
   HelpCircle,
 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -84,26 +85,18 @@ export default function Home() {
                 find, book, and pay trusted professionals for home and
                 maintenance services. Protected by our escrow payment system.
               </p>
-              <div className="flex flex-wrap gap-6 pt-4">
-                <div>
-                  <p className="text-2xl font-bold text-foreground">5K+</p>
-                  <p className="text-sm text-muted-foreground">
-                    Verified Workers
-                  </p>
+              <div className="flex flex-wrap gap-4 pt-4">
+                <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2">
+                  <Shield className="h-4 w-4 text-primary" />
+                  <span className="text-sm font-medium text-foreground">KYC Verified Workers</span>
                 </div>
-                <div>
-                  <p className="text-2xl font-bold text-foreground">10K+</p>
-                  <p className="text-sm text-muted-foreground">Happy Clients</p>
+                <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2">
+                  <Wallet className="h-4 w-4 text-primary" />
+                  <span className="text-sm font-medium text-foreground">Escrow Protection</span>
                 </div>
-                <div>
-                  <p className="text-2xl font-bold text-foreground">4.8★</p>
-                  <p className="text-sm text-muted-foreground">
-                    Average Rating
-                  </p>
-                </div>
-                <div>
-                  <p className="text-2xl font-bold text-foreground">37+</p>
-                  <p className="text-sm text-muted-foreground">App Screens</p>
+                <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2">
+                  <MapPin className="h-4 w-4 text-primary" />
+                  <span className="text-sm font-medium text-foreground">Zamboanga Peninsula</span>
                 </div>
               </div>
               <div className="flex gap-4 pt-4">
@@ -115,11 +108,14 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="relative h-96 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-              <div className="text-center">
-                <Users className="mx-auto h-24 w-24 text-primary/40 mb-4" />
-                <p className="text-muted-foreground">Connecting communities</p>
-              </div>
+            <div className="relative h-[500px] rounded-2xl overflow-hidden bg-muted">
+              <Image
+                src="/images/hero section GIF.gif"
+                alt="iAyos Platform Demo"
+                fill
+                className="object-contain"
+                unoptimized
+              />
             </div>
           </div>
         </div>
@@ -479,6 +475,111 @@ export default function Home() {
                 </h3>
                 <p className="text-sm text-muted-foreground">
                   {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* About Devante Section */}
+      <section className="border-t border-border px-4 py-20 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-6xl">
+          <div className="grid gap-12 lg:grid-cols-2 items-center">
+            <div className="flex justify-center">
+              <div className="relative w-64 h-64">
+                <Image
+                  src="/images/Devante logo.jpg"
+                  alt="Devante Logo"
+                  fill
+                  className="object-contain rounded-2xl"
+                />
+              </div>
+            </div>
+            <div className="space-y-6">
+              <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
+                About Devante
+              </h2>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Devante is a technology company focused on building innovative solutions 
+                that connect communities and empower local economies. Our flagship product, 
+                iAyos, represents our commitment to creating platforms that make everyday 
+                services more accessible, transparent, and trustworthy.
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                Based in Zamboanga Peninsula, Philippines, we understand the unique needs 
+                of our community. Our team combines technical expertise with local knowledge 
+                to build solutions that truly serve our users.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section id="team" className="border-t border-border bg-muted/30 px-4 py-20 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
+              Meet Our Team
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              The passionate people behind iAyos
+            </p>
+          </div>
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
+            {[
+              {
+                name: "Sandara",
+                role: "UI/UX Lead Designer",
+                image: "/images/Sandara.JPG",
+                bio: "I design user-centered interfaces for iAyos, ensuring the product is simple, accessible, and enjoyable to use.",
+              },
+              {
+                name: "Vaniel",
+                role: "Lead Developer",
+                image: "/images/Vaniel.JPEG",
+                bio: "I architect and build the core systems powering iAyos, from real-time features to secure payment integrations.",
+              },
+              {
+                name: "Gabriel",
+                role: "Project Manager",
+                image: "/images/Gabriel.JPEG",
+                bio: "I coordinate our team's efforts, manage timelines, and ensure we deliver features that truly matter to our users.",
+              },
+              {
+                name: "Idris",
+                role: "QA Analyst",
+                image: "/images/Idris.JPEG",
+                bio: "I ensure iAyos meets the highest quality standards through rigorous testing and attention to detail.",
+              },
+              {
+                name: "Inna",
+                role: "Business Analyst",
+                image: "/images/Inna.JPEG",
+                bio: "I bridge user needs with technical solutions, analyzing requirements to shape features that drive business value.",
+              },
+            ].map((member, idx) => (
+              <div
+                key={idx}
+                className="rounded-xl border border-border bg-card p-6 text-center hover:shadow-lg transition"
+              >
+                <div className="relative w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <h3 className="font-semibold text-foreground text-lg">
+                  {member.name}
+                </h3>
+                <p className="text-sm text-primary font-medium mb-3">
+                  {member.role}
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  {member.bio}
                 </p>
               </div>
             ))}
