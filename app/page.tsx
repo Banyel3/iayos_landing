@@ -582,7 +582,7 @@ export default function Home() {
           <div className="border-t border-border pt-8">
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
               <p className="text-sm text-muted-foreground">
-                &copy; 2025 iAyos. All rights reserved. Serving Zamboanga
+                &copy; 2025 Devante. All rights reserved. Serving Zamboanga
                 Peninsula.
               </p>
               <div className="flex items-center gap-4">
