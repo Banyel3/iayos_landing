@@ -27,7 +27,13 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between py-4">
             <div className="flex items-center gap-2">
-              <div className="h-8 w-8 rounded-lg bg-primary"></div>
+              <Image
+                src="/images/iAyos logo.png"
+                alt="iAyos"
+                width={32}
+                height={32}
+                className="rounded-lg"
+              />
               <span className="text-xl font-bold text-foreground">iAyos</span>
             </div>
             <div className="hidden gap-8 md:flex">
@@ -70,7 +76,7 @@ export default function Home() {
       <section className="relative overflow-hidden px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-8 items-center">
-            <div className="space-y-6">
+            <div className="space-y-6 animate-fade-in-up">
               <div className="inline-block rounded-full bg-primary/10 px-4 py-2">
                 <span className="text-sm font-medium text-primary">
                   Trusted by thousands in Zamboanga Peninsula
@@ -86,21 +92,27 @@ export default function Home() {
                 maintenance services. Protected by our escrow payment system.
               </p>
               <div className="flex flex-wrap gap-4 pt-4">
-                <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2">
+                <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 hover:bg-primary/20 transition-colors">
                   <Shield className="h-4 w-4 text-primary" />
-                  <span className="text-sm font-medium text-foreground">KYC Verified Workers</span>
+                  <span className="text-sm font-medium text-foreground">
+                    KYC Verified Workers
+                  </span>
                 </div>
-                <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2">
+                <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 hover:bg-primary/20 transition-colors">
                   <Wallet className="h-4 w-4 text-primary" />
-                  <span className="text-sm font-medium text-foreground">Escrow Protection</span>
+                  <span className="text-sm font-medium text-foreground">
+                    Escrow Protection
+                  </span>
                 </div>
-                <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2">
+                <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 hover:bg-primary/20 transition-colors">
                   <MapPin className="h-4 w-4 text-primary" />
-                  <span className="text-sm font-medium text-foreground">Zamboanga Peninsula</span>
+                  <span className="text-sm font-medium text-foreground">
+                    Zamboanga Peninsula
+                  </span>
                 </div>
               </div>
               <div className="flex gap-4 pt-4">
-                <div className="inline-flex items-center gap-2 rounded-full bg-muted px-4 py-2">
+                <div className="inline-flex items-center gap-2 rounded-full bg-muted px-4 py-2 hover:bg-muted/80 transition-colors">
                   <Smartphone className="h-4 w-4 text-primary" />
                   <span className="text-sm font-medium text-muted-foreground">
                     Mobile App Coming Soon
@@ -108,7 +120,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="relative h-[500px] rounded-2xl overflow-hidden bg-muted">
+            <div className="relative h-[500px] rounded-2xl overflow-hidden bg-muted animate-fade-in animation-delay-200">
               <Image
                 src="/images/hero section GIF.gif"
                 alt="iAyos Platform Demo"
@@ -194,7 +206,8 @@ export default function Home() {
             ].map((feature, idx) => (
               <div
                 key={idx}
-                className="rounded-xl border border-border bg-card p-6 hover:shadow-lg transition"
+                className="rounded-xl border border-border bg-card p-6 hover:shadow-lg transition animate-fade-in-up"
+                style={{ animationDelay: `${idx * 100}ms` }}
               >
                 <feature.icon className="h-8 w-8 text-primary mb-4" />
                 <h3 className="text-lg font-semibold text-foreground mb-2">
@@ -240,7 +253,11 @@ export default function Home() {
                 desc: "Secure payment and leave feedback",
               },
             ].map((item, idx) => (
-              <div key={idx} className="text-center">
+              <div
+                key={idx}
+                className="text-center animate-fade-in-up"
+                style={{ animationDelay: `${idx * 150}ms` }}
+              >
                 <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground font-bold">
                   {item.step}
                 </div>
@@ -278,7 +295,8 @@ export default function Home() {
             ].map((item, idx) => (
               <div
                 key={idx}
-                className="flex-shrink-0 rounded-xl border border-border bg-card overflow-hidden hover:shadow-lg transition"
+                className="shrink-0 rounded-xl border border-border bg-card overflow-hidden hover:shadow-lg transition animate-fade-in-up"
+                style={{ animationDelay: `${idx * 150}ms` }}
               >
                 <div className="h-[400px] w-[225px] bg-muted">
                   <video
@@ -358,7 +376,8 @@ export default function Home() {
             ].map((userType, idx) => (
               <div
                 key={idx}
-                className="rounded-xl border border-border bg-card p-6 hover:shadow-lg transition"
+                className="rounded-xl border border-border bg-card p-6 hover:shadow-lg transition animate-fade-in-up"
+                style={{ animationDelay: `${idx * 150}ms` }}
               >
                 <userType.icon className="h-10 w-10 text-primary mb-4" />
                 <h3 className="text-xl font-bold text-foreground mb-1">
@@ -409,7 +428,8 @@ export default function Home() {
             ].map((service, idx) => (
               <div
                 key={idx}
-                className="rounded-xl border border-border bg-card p-4 hover:shadow-lg transition"
+                className="rounded-xl border border-border bg-card p-4 hover:shadow-lg transition animate-fade-in-up"
+                style={{ animationDelay: `${idx * 75}ms` }}
               >
                 <p className="font-semibold text-foreground">{service.name}</p>
                 <p className="text-lg font-bold text-primary">
@@ -466,7 +486,11 @@ export default function Home() {
                   "Transparent platform fee on completed transactions",
               },
             ].map((item, idx) => (
-              <div key={idx} className="text-center">
+              <div
+                key={idx}
+                className="text-center animate-fade-in-up"
+                style={{ animationDelay: `${idx * 100}ms` }}
+              >
                 <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-primary/10">
                   <item.icon className="h-7 w-7 text-primary" />
                 </div>
@@ -486,7 +510,7 @@ export default function Home() {
       <section className="border-t border-border px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
           <div className="grid gap-12 lg:grid-cols-2 items-center">
-            <div className="flex justify-center">
+            <div className="flex justify-center animate-slide-in-left">
               <div className="relative w-64 h-64">
                 <Image
                   src="/images/Devante logo.jpg"
@@ -496,20 +520,22 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className="space-y-6">
+            <div className="space-y-6 animate-slide-in-right">
               <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
                 About Devante
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Devante is a technology company focused on building innovative solutions 
-                that connect communities and empower local economies. Our flagship product, 
-                iAyos, represents our commitment to creating platforms that make everyday 
-                services more accessible, transparent, and trustworthy.
+                Devante is a technology company focused on building innovative
+                solutions that connect communities and empower local economies.
+                Our flagship product, iAyos, represents our commitment to
+                creating platforms that make everyday services more accessible,
+                transparent, and trustworthy.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Based in Zamboanga Peninsula, Philippines, we understand the unique needs 
-                of our community. Our team combines technical expertise with local knowledge 
-                to build solutions that truly serve our users.
+                Based in Zamboanga Peninsula, Philippines, we understand the
+                unique needs of our community. Our team combines technical
+                expertise with local knowledge to build solutions that truly
+                serve our users.
               </p>
             </div>
           </div>
@@ -517,7 +543,10 @@ export default function Home() {
       </section>
 
       {/* Team Section */}
-      <section id="team" className="border-t border-border bg-muted/30 px-4 py-20 sm:px-6 lg:px-8">
+      <section
+        id="team"
+        className="border-t border-border bg-muted/30 px-4 py-20 sm:px-6 lg:px-8"
+      >
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
@@ -562,7 +591,8 @@ export default function Home() {
             ].map((member, idx) => (
               <div
                 key={idx}
-                className="rounded-xl border border-border bg-card p-6 text-center hover:shadow-lg transition"
+                className="rounded-xl border border-border bg-card p-6 text-center hover:shadow-lg transition animate-fade-in-up"
+                style={{ animationDelay: `${idx * 100}ms` }}
               >
                 <div className="relative w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
                   <Image
@@ -578,9 +608,7 @@ export default function Home() {
                 <p className="text-sm text-primary font-medium mb-3">
                   {member.role}
                 </p>
-                <p className="text-sm text-muted-foreground">
-                  {member.bio}
-                </p>
+                <p className="text-sm text-muted-foreground">{member.bio}</p>
               </div>
             ))}
           </div>
@@ -593,7 +621,13 @@ export default function Home() {
           <div className="grid gap-8 md:grid-cols-4 mb-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <div className="h-6 w-6 rounded-lg bg-primary"></div>
+                <Image
+                  src="/images/iAyos logo.png"
+                  alt="iAyos"
+                  width={24}
+                  height={24}
+                  className="rounded-lg"
+                />
                 <span className="font-bold text-foreground">iAyos</span>
               </div>
               <p className="text-sm text-muted-foreground">

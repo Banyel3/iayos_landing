@@ -13,6 +13,7 @@ import {
   TrendingUp,
 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function BusinessPage() {
   return (
@@ -22,7 +23,13 @@ export default function BusinessPage() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between py-4">
             <Link href="/" className="flex items-center gap-2">
-              <div className="h-8 w-8 rounded-lg bg-primary"></div>
+              <Image
+                src="/images/iAyos logo.png"
+                alt="iAyos"
+                width={32}
+                height={32}
+                className="rounded-lg"
+              />
               <span className="text-xl font-bold text-foreground">iAyos</span>
             </Link>
             <div className="hidden gap-8 md:flex">
@@ -90,14 +97,14 @@ export default function BusinessPage() {
                 </Link>
               </div>
             </div>
-            <div className="relative h-96 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-              <div className="text-center">
-                <Building2 className="mx-auto h-24 w-24 text-primary/60 mb-4" />
-                <p className="text-lg font-medium text-foreground">
-                  Agency Dashboard
-                </p>
-                <p className="text-muted-foreground">Manage your entire team</p>
-              </div>
+            <div className="relative h-[500px] rounded-2xl overflow-hidden bg-muted">
+              <Image
+                src="/images/hero section GIF.gif"
+                alt="iAyos Agency Dashboard Demo"
+                fill
+                className="object-contain"
+                unoptimized
+              />
             </div>
           </div>
         </div>

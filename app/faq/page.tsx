@@ -1,5 +1,6 @@
 import { ChevronDown } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const faqs = [
   {
@@ -133,7 +134,13 @@ export default function FAQPage() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between py-4">
             <Link href="/" className="flex items-center gap-2">
-              <div className="h-8 w-8 rounded-lg bg-primary"></div>
+              <Image
+                src="/images/iAyos logo.png"
+                alt="iAyos"
+                width={32}
+                height={32}
+                className="rounded-lg"
+              />
               <span className="text-xl font-bold text-foreground">iAyos</span>
             </Link>
             <div className="hidden gap-8 md:flex">
