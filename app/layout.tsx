@@ -9,8 +9,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "IAyos",
-  description: "iayos Landing page for wadwhani",
+  title: "iAyos - Home Services Marketplace",
+  description:
+    "Connect with verified local workers for plumbing, electrical, carpentry, cleaning and more. Secure payments, real-time chat, and DOLE-compliant rates in Zamboanga Peninsula.",
 };
 
 export default function RootLayout({

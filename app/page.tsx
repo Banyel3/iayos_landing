@@ -282,15 +282,15 @@ export default function Home() {
             {[
               {
                 title: "Client Experience",
-                video: "/videos/Client Side Pov + Job Request.mp4",
+                video: "/videos/client-experience.mp4",
               },
               {
                 title: "Worker Experience",
-                video: "/videos/Worker Side Pov.mp4",
+                video: "/videos/worker-experience.mp4",
               },
               {
                 title: "Payment Flow",
-                video: "/videos/Payment Flow (slightly modified).mp4",
+                video: "/videos/payment-flow.mp4",
               },
             ].map((item, idx) => (
               <div
@@ -305,6 +305,9 @@ export default function Home() {
                     loop
                     muted
                     playsInline
+                    preload="metadata"
+                    disablePictureInPicture
+                    controlsList="nodownload"
                   >
                     <source src={item.video} type="video/mp4" />
                     Your browser does not support the video tag.
