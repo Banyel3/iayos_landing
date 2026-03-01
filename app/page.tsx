@@ -13,8 +13,6 @@ import {
   Clock,
   Camera,
   Smartphone,
-  Mail,
-  HelpCircle,
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -153,55 +151,55 @@ export default function Home() {
                 icon: Shield,
                 title: "KYC Verified",
                 description:
-                  "All workers and clients are verified through our KYC system with 10+ supported document types for maximum trust and safety.",
+                  "Workers, clients, and agencies are verified via ID + selfie face-match (dlib AI). 10+ supported document types for maximum trust.",
               },
               {
                 icon: Wallet,
                 title: "Escrow Payment Protection",
                 description:
-                  "50/50 split payment system - 50% downpayment when job is accepted, 50% upon completion. Both parties protected.",
+                  "50% downpayment held on job accept, 50% released on completion. GCash via Xendit — both parties fully protected.",
               },
               {
                 icon: MessageSquare,
-                title: "Real-Time Chat",
+                title: "Real-Time Chat & Voice",
                 description:
-                  "WebSocket-powered instant messaging with typing indicators, image sharing, and full conversation history.",
+                  "Django Channels WebSocket messaging with group conversations, plus Agora-powered 1-to-1 and group voice calling.",
               },
               {
                 icon: Navigation,
                 title: "GPS Discovery",
                 description:
-                  "Find verified workers near you with location-based search. Connect with professionals in your area.",
+                  "Haversine-based location search — find verified professionals near you across the Zamboanga Peninsula.",
               },
               {
                 icon: Star,
-                title: "Two-Way Ratings",
+                title: "Two-Way Reviews",
                 description:
-                  "Both clients and workers rate each other. Build reputation and find trusted professionals.",
+                  "Role-specific review criteria for both workers and clients. Build reputation and find trusted professionals.",
               },
               {
                 icon: Briefcase,
                 title: "Worker Portfolios",
                 description:
-                  "Workers showcase certifications, skills, hourly rates, and up to 10 portfolio images.",
+                  "Workers showcase certifications, skills, DOLE-compliant rates, and portfolio images to win more jobs.",
               },
               {
                 icon: Building2,
-                title: "Agency Support",
+                title: "Agency & Team Jobs",
                 description:
-                  "Service companies can register, manage employees, and accept direct job invitations.",
+                  "Multi-skill slot team jobs, employee assignment, daily attendance tracking, and Employee of the Month recognition.",
               },
               {
-                icon: Camera,
-                title: "Cash Payment Verification",
+                icon: Zap,
+                title: "ML Price Prediction",
                 description:
-                  "Choose cash payment with photo proof upload and admin verification for flexibility.",
+                  "LSTM model trained on Philippine blue-collar data suggests fair price ranges when clients post new jobs.",
               },
               {
-                icon: MapPin,
-                title: "Local Focus",
+                icon: Clock,
+                title: "Auto-Withdrawal & Payroll",
                 description:
-                  "Serving the Zamboanga Peninsula with workers who know your community and DOLE-compliant rates.",
+                  "Friday payroll cron with configurable auto-withdrawal to GCash. Track every peso with full wallet history.",
               },
             ].map((feature, idx) => (
               <div
@@ -414,36 +412,47 @@ export default function Home() {
               Services &amp; DOLE-Compliant Rates
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Professional services with transparent, fair pricing based on
-              Department of Labor guidelines
+              20 service categories with DOLE-regulated daily minimums
             </p>
           </div>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5">
             {[
-              { name: "Plumbing", minRate: "₱500", avgRange: "₱500 – ₱5,000" },
-              { name: "Electrical Work", minRate: "₱600", avgRange: "₱600 – ₱8,000" },
-              { name: "Carpentry", minRate: "₱800", avgRange: "₱800 – ₱10,000" },
-              { name: "Home Cleaning", minRate: "₱400", avgRange: "₱400 – ₱3,000" },
-              { name: "HVAC", minRate: "₱1,000", avgRange: "₱1,000 – ₱15,000" },
-              { name: "Painting", minRate: "₱800", avgRange: "₱800 – ₱8,000" },
-              { name: "Masonry", minRate: "₱1,000", avgRange: "₱1,000 – ₱12,000" },
-              { name: "Welding", minRate: "₱800", avgRange: "₱800 – ₱10,000" },
+              { name: "Appliance Repair", minRate: "₱400", range: "₱500–3,000" },
+              { name: "Auto Mechanic", minRate: "₱500", range: "₱500–20,000" },
+              { name: "Carpentry", minRate: "₱450", range: null },
+              { name: "Drywall Installation", minRate: "₱450", range: null },
+              { name: "Electrical Work", minRate: "₱600", range: null },
+              { name: "Furniture Assembly", minRate: "₱300", range: null },
+              { name: "General Cleaning", minRate: "₱300", range: null },
+              { name: "Glass Installation", minRate: "₱500", range: null },
+              { name: "HVAC (Aircon Services)", minRate: "₱500", range: null },
+              { name: "Landscaping", minRate: "₱350", range: null },
+              { name: "Masonry", minRate: "₱500", range: null },
+              { name: "Motorcycle Repair", minRate: "₱350", range: null },
+              { name: "Moving Services", minRate: "₱400", range: null },
+              { name: "Painting", minRate: "₱350", range: null },
+              { name: "Pest Control", minRate: "₱500", range: null },
+              { name: "Plumbing", minRate: "₱500", range: null },
+              { name: "Roofing", minRate: "₱600", range: null },
+              { name: "Security System Install", minRate: "₱600", range: null },
+              { name: "Tiling", minRate: "₱450", range: null },
+              { name: "Welding", minRate: "₱550", range: null },
             ].map((service, idx) => (
               <div
                 key={idx}
                 className="rounded-xl border border-border bg-card p-4 hover:shadow-lg transition animate-fade-in-up"
-                style={{ animationDelay: `${idx * 75}ms` }}
+                style={{ animationDelay: `${idx * 50}ms` }}
               >
-                <p className="font-semibold text-foreground">{service.name}</p>
+                <p className="font-semibold text-foreground text-sm">{service.name}</p>
                 <p className="text-lg font-bold text-primary">
                   {service.minRate}
                   <span className="text-sm font-normal text-muted-foreground">
-                    /job min
+                    /day min
                   </span>
                 </p>
-                <p className="text-xs text-muted-foreground">
-                  Avg: {service.avgRange}
-                </p>
+                {service.range && (
+                  <p className="text-xs text-muted-foreground">Range: {service.range}</p>
+                )}
               </div>
             ))}
           </div>
@@ -562,28 +571,28 @@ export default function Home() {
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
             {[
               {
-                name: "Vaniel",
-                role: "Lead Developer",
-                image: "/images/Vaniel.JPEG",
-                bio: "I architect and build the core systems powering iAyos, from real-time features to secure payment integrations.",
-              },
-              {
                 name: "Gabriel",
                 role: "Assistant Developer | QA Engineer",
                 image: "/images/Gabriel.JPEG",
                 bio: "I support core development and maintain quality through hands-on testing and engineering best practices.",
               },
               {
-                name: "Inna",
-                role: "Assistant UI/UX | QA Engineer",
-                image: "/images/Inna.JPEG",
-                bio: "I craft intuitive interfaces and validate every user interaction to ensure a seamless experience.",
-              },
-              {
                 name: "Sandara",
                 role: "Project Manager | Business Analyst",
                 image: "/images/Sandara.JPG",
                 bio: "I oversee project delivery and translate business needs into clear requirements that drive team success.",
+              },
+              {
+                name: "Vaniel",
+                role: "Lead Developer",
+                image: "/images/Vaniel.JPEG",
+                bio: "I architect and build the core systems powering iAyos, from real-time features to secure payment integrations.",
+              },
+              {
+                name: "Inna",
+                role: "Assistant UI/UX | QA Engineer",
+                image: "/images/Inna.JPEG",
+                bio: "I craft intuitive interfaces and validate every user interaction to ensure a seamless experience.",
               },
               {
                 name: "Idris",
