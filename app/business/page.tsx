@@ -5,7 +5,6 @@ import {
   CheckCircle2,
   Shield,
   Award,
-  Send,
   Clock,
   Wallet,
   Star,
@@ -83,11 +82,13 @@ export default function BusinessPage() {
               </p>
               <div className="flex flex-wrap gap-4 pt-4">
                 <a
-                  href="mailto:business@iayos.com"
+                  href="https://www.iayos.online/auth/register/agency"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 font-medium text-primary-foreground hover:bg-primary/90 transition"
                 >
-                  <Send className="h-4 w-4" />
-                  Contact Sales
+                  <Building2 className="h-4 w-4" />
+                  Register Your Agency
                 </a>
                 <Link
                   href="/faq"
@@ -130,7 +131,7 @@ export default function BusinessPage() {
                   "Add, manage, and track all your workers from a single dashboard. Assign jobs and monitor availability in real-time.",
               },
               {
-                icon: Send,
+                icon: Briefcase,
                 title: "Direct Job Invitations",
                 description:
                   "Receive job requests directly from clients who prefer working with established agencies. No bidding required.",
@@ -371,10 +372,12 @@ export default function BusinessPage() {
                 ))}
               </ul>
               <a
-                href="mailto:business@iayos.com"
+                href="https://www.iayos.online/auth/register/agency"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="block w-full rounded-lg bg-primary py-3 font-medium text-primary-foreground hover:bg-primary/90 transition"
               >
-                Contact Sales
+                Register Your Agency
               </a>
             </div>
           </div>
@@ -393,11 +396,13 @@ export default function BusinessPage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4 mt-8">
             <a
-              href="mailto:business@iayos.com"
+              href="https://www.iayos.online/auth/register/agency"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-4 font-medium text-primary-foreground hover:bg-primary/90 transition"
             >
-              <Send className="h-5 w-5" />
-              Get Started Today
+              <Building2 className="h-5 w-5" />
+              Register Your Agency
             </a>
             <a
               href="tel:+639123456789"

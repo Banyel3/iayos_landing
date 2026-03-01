@@ -411,7 +411,7 @@ export default function Home() {
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-foreground sm:text-4xl text-balance">
-              Services & DOLE-Compliant Rates
+              Services &amp; DOLE-Compliant Rates
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
               Professional services with transparent, fair pricing based on
@@ -420,14 +420,14 @@ export default function Home() {
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { name: "Plumbing", rate: "₱150", level: "Intermediate" },
-              { name: "Electrical", rate: "₱175", level: "Intermediate" },
-              { name: "Carpentry", rate: "₱140", level: "Intermediate" },
-              { name: "Home Cleaning", rate: "₱85", level: "Entry" },
-              { name: "HVAC", rate: "₱200", level: "Expert" },
-              { name: "Painting", rate: "₱120", level: "Intermediate" },
-              { name: "Masonry", rate: "₱130", level: "Intermediate" },
-              { name: "Welding", rate: "₱180", level: "Expert" },
+              { name: "Plumbing", minRate: "₱500", avgRange: "₱500 – ₱5,000" },
+              { name: "Electrical Work", minRate: "₱600", avgRange: "₱600 – ₱8,000" },
+              { name: "Carpentry", minRate: "₱800", avgRange: "₱800 – ₱10,000" },
+              { name: "Home Cleaning", minRate: "₱400", avgRange: "₱400 – ₱3,000" },
+              { name: "HVAC", minRate: "₱1,000", avgRange: "₱1,000 – ₱15,000" },
+              { name: "Painting", minRate: "₱800", avgRange: "₱800 – ₱8,000" },
+              { name: "Masonry", minRate: "₱1,000", avgRange: "₱1,000 – ₱12,000" },
+              { name: "Welding", minRate: "₱800", avgRange: "₱800 – ₱10,000" },
             ].map((service, idx) => (
               <div
                 key={idx}
@@ -436,13 +436,13 @@ export default function Home() {
               >
                 <p className="font-semibold text-foreground">{service.name}</p>
                 <p className="text-lg font-bold text-primary">
-                  {service.rate}
+                  {service.minRate}
                   <span className="text-sm font-normal text-muted-foreground">
-                    /hr min
+                    /job min
                   </span>
                 </p>
                 <p className="text-xs text-muted-foreground">
-                  {service.level} Level
+                  Avg: {service.avgRange}
                 </p>
               </div>
             ))}
@@ -562,12 +562,6 @@ export default function Home() {
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
             {[
               {
-                name: "Sandara",
-                role: "UI/UX Lead Designer",
-                image: "/images/Sandara.JPG",
-                bio: "I design user-centered interfaces for iAyos, ensuring the product is simple, accessible, and enjoyable to use.",
-              },
-              {
                 name: "Vaniel",
                 role: "Lead Developer",
                 image: "/images/Vaniel.JPEG",
@@ -575,21 +569,27 @@ export default function Home() {
               },
               {
                 name: "Gabriel",
-                role: "Project Manager",
+                role: "Assistant Developer | QA Engineer",
                 image: "/images/Gabriel.JPEG",
-                bio: "I coordinate our team's efforts, manage timelines, and ensure we deliver features that truly matter to our users.",
-              },
-              {
-                name: "Idris",
-                role: "QA Analyst",
-                image: "/images/Idris.JPEG",
-                bio: "I ensure iAyos meets the highest quality standards through rigorous testing and attention to detail.",
+                bio: "I support core development and maintain quality through hands-on testing and engineering best practices.",
               },
               {
                 name: "Inna",
-                role: "Business Analyst",
+                role: "Assistant UI/UX | QA Engineer",
                 image: "/images/Inna.JPEG",
-                bio: "I bridge user needs with technical solutions, analyzing requirements to shape features that drive business value.",
+                bio: "I craft intuitive interfaces and validate every user interaction to ensure a seamless experience.",
+              },
+              {
+                name: "Sandara",
+                role: "Project Manager | Business Analyst",
+                image: "/images/Sandara.JPG",
+                bio: "I oversee project delivery and translate business needs into clear requirements that drive team success.",
+              },
+              {
+                name: "Idris",
+                role: "Researcher | Documentor",
+                image: "/images/Idris.JPEG",
+                bio: "I conduct in-depth research and maintain comprehensive documentation to inform and guide the team.",
               },
             ].map((member, idx) => (
               <div
