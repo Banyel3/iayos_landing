@@ -179,7 +179,7 @@ export default function PrivacyPage() {
                 </li>
                 <li>
                   <strong>Payment Processors:</strong> We share necessary
-                  payment information with Xendit and GCash to process
+                  payment information with PayMongo to process
                   transactions.
                 </li>
                 <li>
@@ -305,7 +305,7 @@ export default function PrivacyPage() {
       <footer className="border-t border-border px-4 py-8 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
-            &copy; 2025 Devante. All rights reserved.
+            &copy; 2026 Devante. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm text-muted-foreground">
             <Link href="/privacy" className="text-foreground font-medium">

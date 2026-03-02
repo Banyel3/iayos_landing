@@ -203,7 +203,8 @@ export default function TermsPage() {
               <p className="text-muted-foreground leading-relaxed">
                 Accepted payment methods include Platform Wallet, GCash, Maya,
                 Credit/Debit Cards, Bank Transfer, and verified Cash payments.
-                Payments processed through Xendit are subject to their terms.
+                Deposits are processed via PayMongo QR PH; withdrawals are
+                processed manually by admin.
               </p>
 
               <h3 className="text-xl font-semibold text-foreground mb-3 mt-6">
@@ -357,7 +358,7 @@ export default function TermsPage() {
       <footer className="border-t border-border px-4 py-8 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
-            &copy; 2025 Devante. All rights reserved.
+            &copy; 2026 Devante. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm text-muted-foreground">
             <Link href="/privacy" className="hover:text-foreground transition">

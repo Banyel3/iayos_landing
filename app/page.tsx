@@ -113,7 +113,7 @@ export default function Home() {
                 <div className="inline-flex items-center gap-2 rounded-full bg-muted px-4 py-2 hover:bg-muted/80 transition-colors">
                   <Smartphone className="h-4 w-4 text-primary" />
                   <span className="text-sm font-medium text-muted-foreground">
-                    Mobile App Coming Soon
+                    Available on Android
                   </span>
                 </div>
               </div>
@@ -157,7 +157,7 @@ export default function Home() {
                 icon: Wallet,
                 title: "Escrow Payment Protection",
                 description:
-                  "50% downpayment held on job accept, 50% released on completion. GCash via Xendit — both parties fully protected.",
+                  "50% downpayment held on job accept, 50% released on completion. Powered by PayMongo QR PH — scan with any PH bank or e-wallet. Both parties fully protected.",
               },
               {
                 icon: MessageSquare,
@@ -242,8 +242,8 @@ export default function Home() {
               },
               {
                 step: "3",
-                title: "Book",
-                desc: "Confirm your service appointment",
+                title: "Pay Escrow",
+                desc: "Pay 50% escrow via QR PH to confirm job start",
               },
               {
                 step: "4",
@@ -467,7 +467,7 @@ export default function Home() {
               Secure Payment System
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Protected transactions powered by Xendit with multiple payment
+              Protected transactions powered by PayMongo with multiple payment
               options
             </p>
           </div>
@@ -481,9 +481,9 @@ export default function Home() {
               },
               {
                 icon: Smartphone,
-                title: "GCash Integration",
+                title: "PayMongo QR PH",
                 description:
-                  "Pay and withdraw directly via GCash through Xendit",
+                  "Deposit via universal QR code — scan with GCash, Maya, BPI, UnionBank, or any PH bank/e-wallet",
               },
               {
                 icon: Camera,
@@ -495,7 +495,7 @@ export default function Home() {
                 icon: Clock,
                 title: "10% Platform Fee",
                 description:
-                  "Transparent platform fee on completed transactions",
+                  "10% of total job budget, charged to client at escrow payment. Worker receives full agreed amount.",
               },
             ].map((item, idx) => (
               <div
@@ -729,7 +729,7 @@ export default function Home() {
           <div className="border-t border-border pt-8">
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
               <p className="text-sm text-muted-foreground">
-                &copy; 2025 Devante. All rights reserved. Serving Zamboanga
+                &copy; 2026 Devante. All rights reserved. Serving Zamboanga
                 Peninsula.
               </p>
               <div className="flex items-center gap-4">
@@ -739,7 +739,7 @@ export default function Home() {
                 </div>
                 <div className="inline-flex items-center gap-1 rounded-full bg-muted px-3 py-1 text-xs text-muted-foreground">
                   <Smartphone className="h-3 w-3" />
-                  <span>App Coming Soon</span>
+                  <span>Available on Android</span>
                 </div>
               </div>
             </div>
