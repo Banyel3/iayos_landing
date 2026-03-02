@@ -5,7 +5,6 @@ import {
   CheckCircle2,
   Shield,
   Award,
-  Clock,
   Wallet,
   Star,
   Briefcase,
@@ -90,12 +89,6 @@ export default function BusinessPage() {
                   <Building2 className="h-4 w-4" />
                   Register Your Agency
                 </a>
-                <Link
-                  href="/faq"
-                  className="inline-flex items-center gap-2 rounded-lg border border-border px-6 py-3 font-medium text-foreground hover:bg-muted transition"
-                >
-                  Learn More
-                </Link>
               </div>
             </div>
             <div className="relative h-[500px] rounded-2xl overflow-hidden bg-muted">
@@ -338,7 +331,6 @@ export default function BusinessPage() {
                   "Performance analytics",
                   "Employee management",
                   "Centralized payments",
-                  "Priority support",
                   "Employee of the Month feature",
                 ].map((item, idx) => (
                   <li
@@ -382,13 +374,6 @@ export default function BusinessPage() {
             >
               <Building2 className="h-5 w-5" />
               Register Your Agency
-            </a>
-            <a
-              href="tel:+639123456789"
-              className="inline-flex items-center gap-2 rounded-lg border border-border px-8 py-4 font-medium text-foreground hover:bg-muted transition"
-            >
-              <Clock className="h-5 w-5" />
-              Schedule a Demo
             </a>
           </div>
         </div>
