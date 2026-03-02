@@ -307,26 +307,7 @@ export default function BusinessPage() {
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="border-t border-border bg-primary px-4 py-16 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-6xl">
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 text-center">
-            {[
-              { value: "100+", label: "Registered Agencies" },
-              { value: "500+", label: "Agency Employees" },
-              { value: "₱2M+", label: "Agency Earnings" },
-              { value: "4.9★", label: "Agency Rating" },
-            ].map((stat, idx) => (
-              <div key={idx}>
-                <p className="text-4xl font-bold text-primary-foreground">
-                  {stat.value}
-                </p>
-                <p className="text-primary-foreground/80">{stat.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       {/* Pricing */}
       <section className="border-t border-border px-4 py-20 sm:px-6 lg:px-8">
@@ -391,8 +372,7 @@ export default function BusinessPage() {
             Ready to Grow Your Service Business?
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Join hundreds of agencies already using iAyos to manage their teams
-            and connect with clients.
+            Register your agency on iAyos and start managing your team and connecting with clients across Zamboanga Peninsula.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mt-8">
             <a

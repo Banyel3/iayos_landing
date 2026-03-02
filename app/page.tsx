@@ -77,7 +77,7 @@ export default function Home() {
             <div className="space-y-6 animate-fade-in-up">
               <div className="inline-block rounded-full bg-primary/10 px-4 py-2">
                 <span className="text-sm font-medium text-primary">
-                  Trusted by thousands in Zamboanga Peninsula
+                  Now available in Zamboanga Peninsula
                 </span>
               </div>
               <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl text-balance">

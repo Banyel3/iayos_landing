@@ -219,7 +219,7 @@ export default function FAQPage() {
             Still have questions?
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Our support team is here to help you 24/7
+            Our support team is here to help you
           </p>
           <a
             href="mailto:support@iayos.com"
