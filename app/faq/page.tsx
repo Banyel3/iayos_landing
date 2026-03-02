@@ -62,15 +62,15 @@ const faqs = [
       },
       {
         q: "What payment methods are accepted?",
-        a: "We accept Platform Wallet (top up via GCash/Maya), GCash direct payment, Maya, Credit/Debit Cards, Bank Transfer, and Cash (with photo verification).",
+        a: "Wallet deposits are made via PayMongo QR PH — a universal QR code you scan with any Philippine bank or e-wallet app (GCash, Maya, BPI, UnionBank, and 40+ others). Cash payments are also supported with photo proof verified by our admin team.",
       },
       {
         q: "What are the platform fees?",
-        a: "iAyos charges a 10% platform fee on completed transactions. This fee covers payment processing, platform maintenance, and customer support.",
+        a: "iAyos charges a 10% platform fee on the total job budget. This is charged to the client at the time of escrow payment, before work begins. The worker receives the full agreed job amount.",
       },
       {
         q: "How do workers withdraw their earnings?",
-        a: "Workers can withdraw earnings to their GCash account directly from the app. Go to Wallet > Withdraw, enter the amount, and funds are typically transferred within 1-2 business days.",
+        a: "Go to Wallet > Withdraw in the app, enter the amount (minimum ₱100), and select your preferred method (GCash, bank transfer, Maya, GrabPay, or Visa). Your wallet balance is deducted immediately and your request is sent to our admin team, who process it manually during business hours. You can also enable auto-withdrawal to have weekly requests submitted every Friday.",
       },
       {
         q: "What happens if a client doesn't pay?",
@@ -120,7 +120,7 @@ const faqs = [
       },
       {
         q: "How do I update the app?",
-        a: "Visit the App Store (iOS) or Google Play Store (Android) and check for updates. We recommend keeping auto-updates enabled for the latest features and security patches.",
+        a: "iAyos is currently available as an Android APK. Download the latest version directly from our website or the link provided during registration. There is no iOS version at this time.",
       },
     ],
   },
