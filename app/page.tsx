@@ -109,13 +109,18 @@ export default function Home() {
                   </span>
                 </div>
               </div>
-              <div className="flex gap-4 pt-4">
-                <div className="inline-flex items-center gap-2 rounded-full bg-muted px-4 py-2 hover:bg-muted/80 transition-colors">
-                  <Smartphone className="h-4 w-4 text-primary" />
-                  <span className="text-sm font-medium text-muted-foreground">
-                    Available on Android
-                  </span>
-                </div>
+              <div className="flex flex-col gap-3 pt-4">
+                <a
+                  href="https://github.com/Banyel3/iayos/releases/download/mobile-v1.0.9/iayos-1.0.9.apk"
+                  className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 font-medium text-primary-foreground hover:bg-primary/90 transition w-fit"
+                >
+                  <Smartphone className="h-4 w-4" />
+                  Download Android APK
+                </a>
+                <p className="text-xs text-muted-foreground">
+                  For <span className="font-medium text-foreground">clients</span> and <span className="font-medium text-foreground">workers</span>. Agencies &amp; service companies —{" "}
+                  <Link href="/business" className="text-primary underline underline-offset-2 hover:no-underline">see the For Business page</Link>.
+                </p>
               </div>
             </div>
             <div className="relative h-[500px] rounded-2xl overflow-hidden bg-muted animate-fade-in animation-delay-200">
@@ -417,7 +422,11 @@ export default function Home() {
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5">
             {[
-              { name: "Appliance Repair", minRate: "₱400", range: "₱500–3,000" },
+              {
+                name: "Appliance Repair",
+                minRate: "₱400",
+                range: "₱500–3,000",
+              },
               { name: "Auto Mechanic", minRate: "₱500", range: "₱500–20,000" },
               { name: "Carpentry", minRate: "₱450", range: null },
               { name: "Drywall Installation", minRate: "₱450", range: null },
@@ -443,7 +452,9 @@ export default function Home() {
                 className="rounded-xl border border-border bg-card p-4 hover:shadow-lg transition animate-fade-in-up"
                 style={{ animationDelay: `${idx * 50}ms` }}
               >
-                <p className="font-semibold text-foreground text-sm">{service.name}</p>
+                <p className="font-semibold text-foreground text-sm">
+                  {service.name}
+                </p>
                 <p className="text-lg font-bold text-primary">
                   {service.minRate}
                   <span className="text-sm font-normal text-muted-foreground">
@@ -451,7 +462,9 @@ export default function Home() {
                   </span>
                 </p>
                 {service.range && (
-                  <p className="text-xs text-muted-foreground">Range: {service.range}</p>
+                  <p className="text-xs text-muted-foreground">
+                    Range: {service.range}
+                  </p>
                 )}
               </div>
             ))}
@@ -737,10 +750,13 @@ export default function Home() {
                   <span className="font-medium">"Ayos"</span> - Filipino for "to
                   fix, to repair"
                 </div>
-                <div className="inline-flex items-center gap-1 rounded-full bg-muted px-3 py-1 text-xs text-muted-foreground">
+                <a
+                  href="https://github.com/Banyel3/iayos/releases/download/mobile-v1.0.9/iayos-1.0.9.apk"
+                  className="inline-flex items-center gap-1 rounded-full bg-muted px-3 py-1 text-xs text-muted-foreground hover:bg-muted/80 transition"
+                >
                   <Smartphone className="h-3 w-3" />
-                  <span>Available on Android</span>
-                </div>
+                  <span>Download APK</span>
+                </a>
               </div>
             </div>
           </div>

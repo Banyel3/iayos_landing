@@ -179,8 +179,7 @@ export default function PrivacyPage() {
                 </li>
                 <li>
                   <strong>Payment Processors:</strong> We share necessary
-                  payment information with PayMongo to process
-                  transactions.
+                  payment information with PayMongo to process transactions.
                 </li>
                 <li>
                   <strong>Service Providers:</strong> Third-party services that

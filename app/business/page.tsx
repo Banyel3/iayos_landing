@@ -307,8 +307,6 @@ export default function BusinessPage() {
         </div>
       </section>
 
-
-
       {/* Pricing */}
       <section className="border-t border-border px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
@@ -372,7 +370,8 @@ export default function BusinessPage() {
             Ready to Grow Your Service Business?
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Register your agency on iAyos and start managing your team and connecting with clients across Zamboanga Peninsula.
+            Register your agency on iAyos and start managing your team and
+            connecting with clients across Zamboanga Peninsula.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mt-8">
             <a
